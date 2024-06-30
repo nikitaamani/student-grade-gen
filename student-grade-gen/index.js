@@ -12,5 +12,7 @@ function calculateGrade(mark) {
     }
   }
    
+   let marks = 85; // Replace 85 with any value between 0 and 100 for testing
+  const grade = getGrade(marks);
   
-  
+  console.log(grade);
