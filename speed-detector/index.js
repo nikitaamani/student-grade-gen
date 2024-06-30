@@ -45,3 +45,9 @@ function carSpeedChecker(speed){
         return "invalid"
     }
 }
+ // Get user input for speed
+ const speed = 90; // Replace 90 with any desired value for testing
+  
+ // Calculate and display demerit points or license suspension message
+ const result = calculateDemeritPoints(speed);
+ console.log(result);
