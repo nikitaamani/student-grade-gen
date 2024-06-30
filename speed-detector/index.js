@@ -45,8 +45,3 @@ function carSpeedChecker(speed){
         return "invalid"
     }
 }
-function handleClick(event) {
-    let speed = parseInt(document.getElementById ("Speed").value)
-    let message = carSpeedChecker(speed)
-    document.getElementById("message").textContent = message
-}
