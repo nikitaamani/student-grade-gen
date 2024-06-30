@@ -97,21 +97,5 @@ function netPay(taxableSalary, paye){
 }
 
 
-function handleSalary(event){
-    let val= parseInt(document.getElementById("basic").value)
-    let basicsalary= Boolean(val)? val : 0
-    let allowances = Array.from(document.getElementsByClassName("extraincome")).map(function(element){
-        return Boolean(element.value) ? parseInt(element.value) : 0
-    })
-    let gross = grossIncome(basicsalary, ...allowances)
-    let nhifcut = NHIF(gross)
-    let nssfcut = NSSF(gross)
-    let taxableincome = taxablePay(gross, nhifcut, nssfcut)
-    let payee = PAYE(taxableincome)
-    let net = netPay(taxableincome, payee)
-    document.getElementById("nhif").textContent = nhifcut
-    document.getElementById("nssf").textContent = nssfcut
-    document.getElementById("paye").textContent = payee
-    document.getElementById("TaxablePay").textContent = taxableincome
-    document.getElementById("NetPay").textContent = net
-}
+
+    
